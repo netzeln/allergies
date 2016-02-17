@@ -12,7 +12,7 @@ class  AllergyTest extends PHPUnit_Framework_TestCase
     $result = $test_allergy->getAllergy($score);
 
     //assert
-    $this->assertEquals(array("Eggs"), $result);
+    $this->assertEquals(array("eggs"), $result);
     }
 }
  ?>
