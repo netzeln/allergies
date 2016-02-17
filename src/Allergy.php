@@ -14,8 +14,9 @@ class Allergy {
         {
 
             $allergy = $binArray[$i];
-            array_push($allergyScoreArray, $allergy);
-            ++$i;
+
+            array_push($allergyScoreArray,$allergy);
+            $i++;
         }
 
         foreach ($allergyScoreArray as $allergy_exists)
@@ -24,6 +25,7 @@ class Allergy {
                 array_push($allergiesHad, $key);
             }
         }
+        var_dump($allergiesHad);
         return $allergiesHad;
     }
 
