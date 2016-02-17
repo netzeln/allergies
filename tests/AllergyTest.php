@@ -26,5 +26,29 @@ class  AllergyTest extends PHPUnit_Framework_TestCase
     //assert
     $this->assertEquals(array("peanuts"), $result);
     }
+
+    function test_getAllergy_3() {
+    //Arrange
+    $test_allergy = new Allergy;
+    $score = 3;
+
+    //Act
+    $result = $test_allergy->getAllergy($score);
+
+    //assert
+    $this->assertEquals(array("peanuts", "eggs"), $result);
+    }
+
+    function test_getAllergy_129() {
+    //Arrange
+    $test_allergy = new Allergy;
+    $score = 129;
+
+    //Act
+    $result = $test_allergy->getAllergy($score);
+
+    //assert
+    $this->assertEquals(array("cats", "eggs"), $result);
+    }
 }
  ?>

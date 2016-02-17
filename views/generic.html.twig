@@ -8,6 +8,21 @@
         <title></title>
     </head>
     <body>
+        <form action="/getallergy" method="get">
+            <label for="al-number">Enter an allergy score</label>
+            <input type="number" name="al-number" >
+            <button type="submit" class="btn btn-primary" name="button">Submit</button>
+        </form>
+
+        <p>
+            {% if allergies is not empty%}
+             Your allergies are:
+             <ul>
+                 {% for allergy in allergies %}
+                 <li>{{allergy}}
+                 {% endfor %}
+             </ul>
+            {% endif %}
 
     </body>
 </html>
